@@ -82,7 +82,7 @@ void AHT20::process(Driver *drv) {
 						t = (uint32_t)((((uint32_t)data[3] & 0x0F) << 16) | ((uint32_t)data[4] << 8) | (uint32_t)data[5]) / 1048576.0 * 200.0 - 50.0;
 
 						polling_tickcnt = get_tickcnt();
-						state = s_read;
+						state = s_trigger;
 					} else {
 						state = s_error;
 					}
